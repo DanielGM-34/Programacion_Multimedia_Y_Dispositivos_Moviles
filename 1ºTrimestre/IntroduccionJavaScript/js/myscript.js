@@ -159,3 +159,38 @@ else {
 function myFirstFunction(){
     console.log("Gracias")
 }
+
+
+function mySecondFunction(){
+    console.log("Thank you for you interest")
+}
+
+function myThirstFunction(a){
+console.log(`pesao ${a}`)
+}
+
+//SELECT DOM I
+let div = document.getElementById("my_div");
+div.classList.add("my_class");
+console.log(div);
+
+//SELECT DOM II
+let div2= document.getElementsByTagName("div");
+console.log(div2);
+
+//SELECT DOM III
+let div3= document.querySelector("#my_second_div");
+console.log(div3);
+
+
+
+function $(selector){
+    return document.querySelectorAll(selector);
+}
+
+
+
+
+console.log($("#my_second_div"));
+console.log($(".my_class"))
+
