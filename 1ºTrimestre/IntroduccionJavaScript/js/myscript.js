@@ -1,3 +1,7 @@
+function $(selector){
+    return document.querySelector(selector);
+}
+
 //alert("Hello World."); 
 /*
 
@@ -184,13 +188,40 @@ console.log(div3);
 
 
 
-function $(selector){
-    return document.querySelectorAll(selector);
-}
-
-
-
 
 console.log($("#my_second_div"));
-console.log($(".my_class"))
+console.log($(".my_class"));
+console.log($((".pruebas")));
+console.log($(("#btn")));
 
+/*
+
+siempre CLASS se accede con el .nombreClase
+
+
+usamos id cuando es algo específico ejemplo inputs de formulario #nombreId
+*/
+
+var numbers = [1,2,3,4];
+var n_elevator_2 = numbers.map((n) => {return n*n});
+var n_elevator_2 = numbers.map(n=> n*n);
+
+
+//Create DOM Nodes I
+
+$("#btn").addEventListener("click", function () {
+    var input = document.createElement("input");
+    input.setAttribute("type", "email");
+    input.setAttribute("placeholder", "E-mail");
+    input.setAttribute("name", "emails [] ");
+    $("#form").appendChild(input);
+    myAlert("Add new email input")
+
+});
+
+function myAlert(msg) {
+    var div = document.createElement("div");
+    div.classList.add("alert");
+    div.innerHTML = msg;
+    $("body").insertBefore(div, $("body").firstChild)
+}
