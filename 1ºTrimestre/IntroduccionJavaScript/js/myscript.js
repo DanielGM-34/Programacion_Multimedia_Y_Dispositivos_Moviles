@@ -213,15 +213,45 @@ $("#btn").addEventListener("click", function () {
     var input = document.createElement("input");
     input.setAttribute("type", "email");
     input.setAttribute("placeholder", "E-mail");
-    input.setAttribute("name", "emails [] ");
+    input.setAttribute("name", "emails[]");
     $("#form").appendChild(input);
-    myAlert("Add new email input")
+    myAlert("<h2> Add new email input </h2>");
 
 });
 
+/*
 function myAlert(msg) {
     var div = document.createElement("div");
     div.classList.add("alert");
     div.innerHTML = msg;
-    $("body").insertBefore(div, $("body").firstChild)
+    $("body").insertBefore(div, $("body").firstChild);
+    console.log($("body").children[1]);
+
+
+}
+*/
+
+function bind_close(){
+    let elements = document.querySelectorAll(".close");
+    for (let i = elements.length-1;i>=0; i--) {
+        let element = elements[i];
+        element.addEventListener("click",function(){
+            this.parentNode.style.display="none";
+        });
+        
+    }
+}
+
+function myAlert(msg) {
+    console.log($("body").children[1]);
+    var div=document.createElement("div");
+    div.classList.add("alert");
+    div.innerHTML=msg;
+    var close=document.createElement("span");
+    close.style.float="right";
+    close.classList.add("close");
+    close.innerHTML="X";
+    div.appendChild(close);
+    $("body").insertBefore(div, $("body").firstChild);
+    bind_close();
 }
