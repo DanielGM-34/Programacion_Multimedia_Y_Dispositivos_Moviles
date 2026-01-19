@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/textoMuestraDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pulsado"
+        android:textSize="20dp" />
+    <RadioGroup
+        android:id="@+id/DiasSemana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/Lunes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lunes" />
+        <RadioButton
+            android:id="@+id/Martes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Martes" />
+        <RadioButton
+            android:id="@+id/Miercoles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Miércoles" />
+        <RadioButton
+            android:id="@+id/Jueves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jueves" />
+        <RadioButton
+            android:id="@+id/Viernes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Viernes" />
+        <RadioButton
+            android:id="@+id/Sabado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sábado" />
+        <RadioButton
+            android:id="@+id/Domingo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Domingo" />
+    </RadioGroup>
+
+
+</LinearLayout>
